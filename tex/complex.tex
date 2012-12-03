@@ -1,0 +1,37 @@
+\section{Komplexe Zahlen}
+
+Komplexe Zahlen können im TI Voyage 200 in der Form $a+b\imath$ (Rectangular) oder 
+$r \: \angle \: \phi$ (Polar) geschrieben werden. Unter 
+$MODE \blacktriangleright Complex \ Format$ kann der Standard-Modus ausgewählt werden.
+Der Modus $Real$ zeigt nur komplexe Werte an, wenn auch die Eingabe komplex war.
+Die Eingabe und Umrechnung geschieht folgendermassen: \\
+\begin{tabular}{l l l}
+	$2 5+3*\imath$			& | & $... \blacktriangleright Rect$	\\
+	$(2 \angle 30) $		& | & $... \blacktriangleright Polar$	\\
+\end{tabular}
+
+\subsection{Funktionen}
+\begin{tabular}{|l|l|}
+	\hline
+	$cFactor(x^2+a^2,x)$								& Komplexe Faktorzerlegung nach $x$						\\ \hline
+	$cSolve(x^2+x+1,x)$									& Lösen der komplexen Gleichung nach $x$				\\
+	$cSolve(x=2*y \: and \: y^2=-1)$					& Lösen komplexer Gleichungssysteme nach $x$ und $y$	\\ \hline
+	$cZeros(x^2+1,x)$									& Bestimmen der (komplexen) Nullstellen					\\ \hline
+	$conj(z)$											& Konjugiert-komplexe Zahl $\bar{z}$					\\ \hline
+	$abs(z)$											& Betrag $|z|$											\\ \hline
+	$angle(z)$											& Winkel $\arg(z)$										\\ \hline
+	$real(z)$											& Realteil $\Re(z)$										\\ \hline
+	$imag(z)$											& Imaginärteil $\Im(z)$									\\ \hline
+\end{tabular}
+
+\subsection{Umrechnungen}
+\begin{tabular}{|l|l|}
+	\hline
+	$P \blacktriangleright Rx(r,\theta)$						& Gibt die $X$-Koordinate des Paars $(r,\phi)$ zurück.		\\ 
+	$P \blacktriangleright Rx(\{r1,r2\},\{\theta 1,\theta 2\})$	& Funktioniert auch für Listen...							\\ 
+	$P \blacktriangleright Rx([r1,r2;r3,r4],[\theta 1,\theta 2; \theta 3, \theta 4 ]) $
+																& .. und Vektoren / Matrizen								\\ \hline
+	$P \blacktriangleright Ry(r,\phi)$							& Gibt die $Y$-Koordinate des Paars $(r,\phi)$ zurück.		\\ \hline
+	$R \blacktriangleright Pr(x,y) $							& Gibt die $r$-Koordinate des Paars $(x,y)$ zurück.			\\ \hline
+	$R \blacktriangleright P \theta(x,y)$						& Gibt die $\theta$-Koordinate des Paars $(x,y)$ zurück.	\\ \hline
+\end{tabular}

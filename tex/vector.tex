@@ -1,0 +1,37 @@
+\section{Vektoren / Matrizen}
+
+Vektoren und Matrizen werden im TI Voyage 200 folgendermassen eingegeben: \\
+\begin{tabular}{|l|l|l|}
+	\hline
+	$ [a,b] $ 			& $ \begin{bmatrix} a & b \end{bmatrix} $ 								& Zeilenvektoren \\ \hline
+	$ [a;b] $			& $ \begin{bmatrix} a \\ b \end{bmatrix} $								& Spaltenvektoren \\ \hline
+	$ [a,b;c,d] $		& \multirow{2}{*}{ $ \begin{bmatrix}a & b \\ c & d  \end{bmatrix} $ }	& \multirow{2}{*}{Matrizen}\\
+	$ [[a,b][c,d]] $	&	& \\ \hline
+\end{tabular}
+
+\subsection{Vektor-Funktionen}
+\begin{tabular}{|l|l|}
+	\hline
+	$crossP( \vec{a}, \vec{b})$		& Kreuzprodukt $\vec{a} \times \vec{b}$ \\ \hline
+	$dotP( \vec{a}, \vec{b}$		& Skalarprodukt $\vec{a} \circ \vec{b}$ \\ \hline
+\end{tabular}
+
+\subsection{Matrix-Funktionen}
+\begin{tabular}{|l|l|}
+	\hline
+	$det(A)$						& Determinante der Matrix $A$ \\ \hline
+	$rref(A)$						& Gibt die reduzierte Zeilenstaffelform der Matrix an. $\begin{bmatrix}1&0&a \\ 0&1&b\end{bmatrix}$ \\ \hline
+	$eigVc(A)$						& Ergibt eine Matrix, welche die Eigenvektoren der Matrix $A$ enthält. \\ \hline
+	$eigVl(A)$						& Gibt eine Liste der Eigenwerte der Matrix $A$ zurück. \\ \hline
+	$identity(n)$					& Gibt eine Einheitsmatrix der Dimension $n$ zurück. \\ \hline
+	$max(A)$						& Gibt einen Zeilenvektor zurück, der das Maximum jeder Spalte enthält. \\ \hline
+	$min(A)$						& Gibt einen Zeilenvektor zurück, der das Minimum jeder Spalte enthält. \\ \hline
+\end{tabular}
+
+\subsection{Weitere Funktionen}
+\begin{tabular}{|l|l|}
+	\hline
+	$list \blacktriangleright mat(\{...\})$			& Gibt einen Zeilenvektor mit den Elementen der Liste zurück. \\
+	$list \blacktriangleright mat(\{...\},a)$		& Gibt eine Matrix mit $a$ Elementen pro Zeile zurück.\\ \hline
+	$mat \blacktriangleright list([...])$			& Gibt eine Liste mit dem Inhalt der Matrix zurück (Zeile für Zeile). \\ \hline
+\end{tabular}

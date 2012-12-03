@@ -1,0 +1,53 @@
+\section{Basics}
+
+\subsection{Tipps / Tricks}
+\begin{tabular}{|l|l|}
+	\hline
+	$ON$			& Bricht die aktuelle Aktion ab. \\ \hline
+	$\diamond + G$	& Aktiviert griechisches Alphabet. (für das nächste Zeichen) \\
+					& $\diamond+G \: \to \: D \: = \: \delta$ \\
+					& $\diamond+G \: \to \: \Uparrow+D \: = \: \Delta$ \\ \hline
+\end{tabular}
+
+\subsection{Basic Funtions}
+\begin{tabular}{|l|l|}
+	\hline
+	$solve(x+1=5,x)$									& Löse die Gleichung nach $x$											\\
+	$solve(x+1=y \: and \: y+2=x,\{x,y\})$				& Löse das Gleichungssystem nach $x$ und $y$							\\ \hline
+	$abs(a)$ 											& Betrag  $|a|$ einer (komplexen) Zahl $a$								\\ \hline
+	$root(a,n)$											& $\sqrt[n]{a}$ bzw. $\sqrt{a}$, falls n weggelassen wird.				\\ \hline
+	$limit(n+1,n,\infty)$								& $\lim_{n \to \infty}(n+1)$											\\ \hline
+	$\sum(n+1,n,a,b)$									& $\sum_{n=a}^b n+1$													\\ \hline
+	$\int(x+1,x,a,b)$									& $\int_{a}^b x+1 dx$ ($a$ und $b$ optional)							\\ \hline
+	$\delta(x+1,x,n)$									& $\frac{\delta^n}{\delta x^n} x+1$										\\ \hline
+	$expand((x+1)(x+2))$								& Multipliziert den Term aus. Führt auch PBZ durch.						\\ \hline
+	$factor(x^2+x)$										& Zerlegt den Term in Faktoren.											\\ 
+	$factor(x2 +x,x)$									& Faktorisiert den Term nach der Variable $x$							\\ \hline
+	$gcd(a,b)$											& Gibt den grössten gemeinsamen Teiler (ggT) von $a$ und $b$ zurück.	\\ \hline
+	$lcm(a,b)$											& Gibt das kleinste gemeinsame Vielfache (kgV) von $a$ und $b$ zurück.	\\ \hline
+\end{tabular}
+
+\subsection{Advanced Functions}
+\begin{tabular}{|l|l|l}
+	\hline
+	$impDif(x^2+y^2=100,x,y)$							& Berechnet die implizite Ableitung der Gleichung, wenn eine Variable \\
+														& implizit durch die Andere gegeben ist. Resultat: $-x/y$		\\ \hline
+	$nDeriv(x^2,x,[h])$									& Berechnet die numerische Ableitung nach $x$. Der optionale Parameter \\
+														& $h$ gibt die Schrittweite an. Wenn statt $x^2$ eine Liste oder Matrix \\
+														& verwendet wird, wird die Ableitung über entsprechenden Werte gebildet. \\ \hline
+	$fMax(-(x-a)^2,x)$									& Gibt Werte für x an, so dass der Term maximal wird.			\\
+	$fMax(-(x-a)^2,x)|x>3$								& ... mit eingeschränktem Lösungsintervall						\\ \hline
+	$fMin((x-a)^2,x)$									& Gibt Werte für x an, so dass der Term minimal wird.			\\ \hline
+	$exp \blacktriangleright list(x=2 \: or \: x=1,x)$	& Gibt durch $or$ getrennte Werte als Liste zurück ($\{2,1\}$) 	\\ \hline 
+\end{tabular}
+
+\section{Zahlensysteme}
+Der TI Voyage kennt folgende Zahlensysteme und Umrechnungsfunktionen: \\
+\begin{tabular}{l l l}
+	$... \blacktriangleright bin$ & $0b...$ & Binärsystem \\
+	$... \blacktriangleright hex$ & $0h...$ & Hexadezimalsystem \\
+	$... \blacktriangleright dez$ & $...$	& Dezimalsystem \\
+\end{tabular}
+
+Unter $MODE \blacktriangleright BASE$ wird das Standard-Zahlensystem festgelegt.
+Hinweis: Nur die Ausgabe wird verändert. Die Eingabe muss weiterhin mit z.B. $0b...$ erfolgen. \\ 

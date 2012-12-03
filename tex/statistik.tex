@@ -1,0 +1,47 @@
+\section{Statistik / Wahrscheinlichkeit}
+
+\subsection{Funktionen}
+\begin{tabular}{|l|l|}
+	\hline
+	$mean(\{...\})$				& Berechnet das arithmetische Mittel der Elemente der Liste. \\
+	$mean(\{...\},\{...\})$		& Mit einer zweiten Liste lassen sich die Elemente einzeln gewichten. \\ \hline
+	$mean(A)$					& Gibt einen Zeilenvektor mit den arith. Mitteln der Spalten zurück. \\ 
+	$mean(A,B)$					& Mit einer Matrix $B$ lassen sich die Elemente von $A$ gewichten. \\ \hline
+	$median(\{...\})$			& Berechnet den Median der Elemente der Liste. \\
+	$median(A)$					& Gibt einen Zeilenvektor mit den Medianwerten der Spalten zurück. \\ \hline
+	$nCr(n,k)$					& Binominalkoeffizient $\binom{n}{k}$ - funktioniert auch für Listen und Matrizen	\\ \hline
+	$nPr(n,k)$					& Anzahl Möglichkeiten unter Berücksichtigung der Reihenfolge $k$ Elemente aus $n$ auszuwählen. \\ \hline
+	$OneVar L1,[L2],[L3],[L4]$	& Berechnet die Statistiken der Liste L1. Die Statistik wird mit $ShowStat$ eingeblendet. \\
+								& Folgende Werte werden berechnet: $ \bar x, \: \sum x, \: \sum x^2, \: \sigma x, \: ...$ \\
+								& Optionale Listen: L2: Häufigkeit, L3: Klassencodes, L4: Klassenliste \\ \hline
+\end{tabular}
+
+\subsection{Regression}
+Zur Berechnung einer Regression muss eine Liste ($\{...\}$) die x-Werte enthalten 
+und eine zweite Liste die y-Werte. Der Befehl $LinReg \: L1,L2$ berechnet die lineare 
+Regression. Mit $ShowStat$ werden die berechneten Werte angezeigt. 
+Es ist auch möglich, die Datenpunkte und die Regressionskurve zu plotten: 
+$Regeq(x) \to y1(x)$ und $NewPlot \: 1,1,L1,L2$ \\
+Optional können weitere Listen angegeben werden: L3: Häufigkeit, L4: Klassencodes, 
+L5: Klassenliste, wobei alle Listen ausser L5 die gleiche Dimension besitzen müssen.
+Iterationen gibt die maximale Anzahl Lösungsversuche an. (Standard: 64)\\
+\begin{tabular}{l l}
+Lineare Regression						&	$LinReg \: L1,L2,[L3],[L4,L5]$ \\
+Logarithmische Regression				&	$LnReg \: L1,L2,[L3],[L4,L5]$ \\
+Logistische Regression					&	$Logistic \: L1,L2,[\text{Iterationen}],[L3],[L4,L5]$\\
+Potenz-Regression						&	$PowerReg \: L1,L2,[L3],[L4,L5]$ \\
+Quadratische Polynomische Regression	&	$QuadReg \: L1,L2,[L3],[L4,L5]$ \\
+Polynomische Regression 4-ter Ordnung	&	$QuartReg \: L1,L2,[L3],[L4,L5]$ \\
+\end{tabular}
+
+\subsection{Zufallszahlen}
+\begin{tabular}{|l|l|}
+	\hline
+	$RandSeed \: 1147$					& Setzt die Ausgangsbasis (Seed) für den Zufallszahl-Generator \\ \hline
+	$rand()$							& Gibt eine Zufallszahl zwischen $0$ und $1$ zurück. \\
+	$rand(n)$							& Gibt eine Zufallszahl zwischen $0$ und $n$ (für $n$ pos.) \\ 
+										& bzw. zwischen $n$ und $0$ (für $n$ neg.) zurück. \\ \hline
+	$randMat(n,m)$						& Erzeugt eine ganzzahlige Matrix mit $n$ Zeilen und $m$ Spalten mit Werten $-9<x<+9$. \\ \hline
+	$randNorm(a,sd)$					& Gibt eine reelle Zufallszahl um den Mittelwert $a$ mit der Standardabweichung $sd$ aus. \\ \hline
+	$randPoly(x,n)$						& Erzeugt ein Polynom der Variable $x$ der Ordnung $n$ mit Koeffizienten $-9<x<+9$ \\ \hline
+\end{tabular}

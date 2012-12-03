@@ -1,0 +1,68 @@
+% header.tex von Koeppel Koeppel & Konsortium
+
+%Angaben zum Dokument
+\newcommand*\myauthor{Hannes Badertscher}
+\newcommand*\mytitle{TI Voyage 200 - Befehlsreferenz}
+\newcommand*\mydate{\today}
+
+%Schriftgroesse, Layout, Papierformat, Gleichungen Linksbuendig
+\documentclass[10pt,twoside,a4paper,fleqn]{article}
+
+%Abmessungen Layout
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
+
+%Package fuer Umlaute
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%Package fuer Deutsch
+\usepackage[ngerman]{babel}
+
+%Formeln
+\usepackage{amsmath}
+%Spezielle Symbole in Formeln 
+\usepackage{amssymb}
+%Sonderzeichen
+\usepackage{textcomp}
+%Bilder und Grafiken
+\usepackage{graphicx}
+%Textfarben
+\usepackage{color}
+%Fliesstext
+\usepackage{wrapfig}
+%Header und Footer
+\usepackage{fancyhdr}
+%Teile des Dokuments Mehrspaltig
+\usepackage{multicol}
+%Mehere Zellen vertikal verbinden
+\usepackage{multirow} 
+%Rotieren von Elementen (Bilder, Tabellen...)
+\usepackage{rotating}
+%Schriftart
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+%Multirow
+\usepackage{multirow}
+%Einzelne Seite querformat
+\usepackage{lscape}
+
+
+%Seitenaufbau
+\pagestyle{fancy} %eigener Seitenstil
+%\fancyhf{}
+
+%Linker Header
+\lhead{\mytitle}
+
+
+%Rechter Header
+%Linker Footer
+\lfoot{\myauthor}
+%Center Footer
+\cfoot{\thepage}
+%Rechter Footer
+\rfoot{\mydate}
+%Text Linksbuendig, unregelmaessiger rechter Rand
+\raggedright
+
+\renewcommand{\arraystretch}{1.5}
