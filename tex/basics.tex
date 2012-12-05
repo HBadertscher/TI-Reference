@@ -23,6 +23,7 @@
 	$expand((x+1)(x+2))$								& Multipliziert den Term aus. Führt auch PBZ durch.						\\ \hline
 	$factor(x^2+x)$										& Zerlegt den Term in Faktoren.											\\ 
 	$factor(x2 +x,x)$									& Faktorisiert den Term nach der Variable $x$							\\ \hline
+	$arcLen(cos(x),x,a,b)$								& Gibt die Bogenlänge der Funktion zwischen $a$ und $b$ and. \\ \hline
 	$gcd(a,b)$											& Gibt den grössten gemeinsamen Teiler (ggT) von $a$ und $b$ zurück.	\\ \hline
 	$lcm(a,b)$											& Gibt das kleinste gemeinsame Vielfache (kgV) von $a$ und $b$ zurück.	\\ \hline
 \end{tabular}
@@ -30,6 +31,10 @@
 \subsection{Advanced Functions}
 \begin{tabular}{|l|l|l}
 	\hline
+	$deSolve(y''+2*y'=2*x,x,y)$							& Löst die DGL (1. oder 2. Ordnung) und gibt eine allgemeine \\ 
+	$deSolve(y'=x \text{ and } y(0)=0,x,y)$				& Lösung aus. Werden Anfangs-/Randbedingungen angegeben wird eine\\
+	$deSolve(y''+y'+y=sin(x) \text{ and } $ 			& spezielle Lösung ausgegeben. Generelle Eingabe:\\ 
+	$y(0)=0 \text{ and } y'(0)=1,x,y)$					& deSolve(DGL and Anfangsbedingung ,unabhängige Variable, abhängige Variable) \\ \hline
 	$impDif(x^2+y^2=100,x,y)$							& Berechnet die implizite Ableitung der Gleichung, wenn eine Variable \\
 														& implizit durch die Andere gegeben ist. Resultat: $-x/y$		\\ \hline
 	$nDeriv(x^2,x,[h])$									& Berechnet die numerische Ableitung nach $x$. Der optionale Parameter \\
