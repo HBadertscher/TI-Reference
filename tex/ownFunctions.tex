@@ -1,0 +1,17 @@
+\section{Eigene Funktionen}
+
+Eigene Funktionen werden mit dem $Define$ Befehl definiert. Die Syntax lautet wie folgt: \\
+$ Define \: func(x) = y$
+
+Stückweise definierte Funktionen können mit dem $when$ Befehl unterschieden werden: \\
+$ Define \: func(x)=when(Bedingung,Dann,Sonst) $ \\
+Auch Verschachtelungen sind möglich: \\
+$ Define \: func(x)=when(Bedingung1,Dann,when(Bedingung2,Dann,Sonst)) $
+
+\subsection{Praktische Funktionen}
+	\begin{tabular}{|l|l|}
+		\hline
+		Sprungfunktion & $Define \: sp(x)=when(x<0,0,when(x=0,1/2,1)) $\\ \hline
+		Signum & $Define \: sgn(x)=when(t<0,-1,when(x=0,0,1))$ \\ \hline
+		Rechteckimpuls & $Define \: pa(x,a)=sp(x+a)-sp(x-a)$ \\ \hline
+	\end{tabular}
