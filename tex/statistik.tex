@@ -14,16 +14,16 @@
 	$nCr(n,k)$					& Binominalkoeffizient $\binom{n}{k}$ - funktioniert auch für Listen und Matrizen	\\ \hline
 	$nPr(n,k)$					& Anzahl Möglichkeiten unter Berücksichtigung der Reihenfolge $k$ Elemente aus $n$ auszuwählen. \\ \hline
 	$OneVar L1,[L2],[L3],[L4]$	& Berechnet die Statistiken der Liste L1. Die Statistik wird mit $ShowStat$ eingeblendet. \\
-	$ShowStat$					& Folgende Werte werden berechnet: $ \bar x, \: \sum x, \: \sum x^2, \: \sigma x, \: ...$ \\
+	$stat.Result$					& Folgende Werte werden berechnet: $ \bar x, \: \sum x, \: \sum x^2, \: \sigma x, \: ...$ \\
 								& Optionale Listen: $L2$: Häufigkeit, $L3$: Klassencodes, $L4$: Klassenliste \\ \hline
 	$TwoVar L1,L2,[L3],[L4],[L5]$ & Gleich wie $OneVar$, einfach für 2 Variablen. \\
-	$ShowStat$ & $L1$, $L2$: Variablen $X$ und $Y$, $L3-5$: wie bei $OneVar$ \\ \hline
+	$stat.Result$ & $L1$, $L2$: Variablen $X$ und $Y$, $L3-5$: wie bei $OneVar$ \\ \hline
 \end{tabular}
 
 \subsection{Regression}
 Zur Berechnung einer Regression muss eine Liste ($\{...\}$) die x-Werte enthalten 
-und eine zweite Liste die y-Werte. Der Befehl $LinReg \: L1,L2$ berechnet die lineare 
-Regression. Mit $ShowStat$ werden die berechneten Werte angezeigt. 
+und eine zweite Liste die y-Werte. Der Befehl $LinRegMx \: L1,L2$ berechnet die lineare 
+Regression. Mit $stat.Result$ werden die berechneten Werte angezeigt. 
 Es ist auch möglich, die Datenpunkte und die Regressionskurve zu plotten: 
 $Regeq(x) \to y1(x)$ und $NewPlot \: 1,1,L1,L2$ Optional können weitere Listen 
 angegeben werden: L3: Häufigkeit, L4: Klassencodes,  L5: Klassenliste, wobei alle Listen ausser 
@@ -32,7 +32,7 @@ L5 die gleiche Dimension besitzen müssen. 'Iterationen' gibt die maximale Anzah
 
 \begin{tabular}{|l|l|}
 	\hline
-	Lineare Regression						&	$LinReg \: L1,L2,[L3],[L4,L5]$ \\ \hline
+	Lineare Regression						&	$LinRegMx \: L1,L2,[L3],[L4,L5]$ \\ \hline
 	Logarithmische Regression				&	$LnReg \: L1,L2,[L3],[L4,L5]$ \\ \hline
 	Logistische Regression					&	$Logistic \: L1,L2,[\text{Iterationen}],[L3],[L4,L5]$\\ \hline
 	Potenz-Regression						&	$PowerReg \: L1,L2,[L3],[L4,L5]$ \\ \hline
